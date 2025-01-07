@@ -45,8 +45,15 @@
               const lineDua = document.getElementById('lineDua');
               lineDua.addEventListener('click', () => lineClamp('lineDua'));
             });
-            
-
+            // Aos Animation
+            window.addEventListener("load", function () {
+              setTimeout(() => {
+                  document.getElementById("loading-screen").style.display = "none";
+                  AOS.init({
+                      once: true 
+                  });
+              }, 2000); 
+          });
 
          
           

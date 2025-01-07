@@ -168,12 +168,10 @@
       </div>
     </section>
     <!-- Tombol Top -->
-    <a href="#kenal">
-      <button
-        class="lg:h-14 lg:w-14 w-12 h-12 rounded-full fixed bottom-14 right-6 md:bottom-20 md:right-14 
-        lg:bottom-24 lg:right-20 xl:bottom-28 xl:right-28 z-[9999] bg-personal hover:bg-personal-hover p-4 cursor-pointer justify-center flex items-center">
-        <i class="fa-solid fa-arrow-up text-white lg:text-xl"></i>
-      </button>
+    <a href="#kenal"
+      class="lg:h-14 lg:w-14 w-12 h-12 rounded-full fixed bottom-14 right-6 md:bottom-20 md:right-14 
+    lg:bottom-24 lg:right-20 xl:bottom-28 xl:right-28 z-[9] bg-personal hover:bg-personal-hover p-4 cursor-pointer justify-center flex items-center">
+      <i class="fa-solid fa-arrow-up text-white lg:text-xl"></i>
     </a>
     <!-- Tentang Saya -->
     <section class="pt-20 lg:pt-24" id="saya">
@@ -567,7 +565,7 @@
                     </svg>
                   </button>
                   <div id="faq1-content"
-                    class="max-h-0 overflow-hidden mt-2 pl-4 transition-all duration-500 ease-in-out">
+                    class="max-h-0 overflow-hidden mt-2 pl-4 transition-all duration-200 ease-in-out">
                     <p>Masih kosong</p>
                   </div>
                 </div>
@@ -583,7 +581,7 @@
                     </svg>
                   </button>
                   <div id="faq2-content"
-                    class="max-h-0 overflow-hidden mt-2 pl-4 transition-all duration-500 ease-in-out">
+                    class="max-h-0 overflow-hidden mt-2 pl-4 transition-all duration-200 ease-in-out">
                     <p>Masih kosong</p>
                   </div>
                 </div>
@@ -599,7 +597,7 @@
                     </svg>
                   </button>
                   <div id="faq3-content"
-                    class="max-h-0 overflow-hidden mt-2 pl-4 transition-all duration-500 ease-in-out">
+                    class="max-h-0 overflow-hidden mt-2 pl-4 transition-all duration-200 ease-in-out">
                     <p>Masih Kosong.</p>
                   </div>
                 </div>
@@ -615,7 +613,7 @@
                     </svg>
                   </button>
                   <div id="faq4-content"
-                    class="max-h-0 overflow-hidden mt-2 pl-4 transition-all duration-500 ease-in-out">
+                    class="max-h-0 overflow-hidden mt-2 pl-4 transition-all duration-200 ease-in-out">
                     <p>Masih kosong</p>
                   </div>
                 </div>
@@ -736,7 +734,10 @@
     <div class="mt-10 flex justify-center text-gray-300 text-sm lg:text-base">
       <p>&copy; 2024 Hidayat. Built with ❤️ and TailwindCSS.</p>
     </div>
-
+    <div id="loading-screen" class="fixed inset-0 flex flex-col items-center justify-center bg-white z-50 gap-10">
+      <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
+      <div class="text-2xl md:text-3xl  font-semibold text-gray-800 animate-pulse">Memuat...</div>
+    </div>
   </footer>
   <!-- Js Personal -->
   <script src="../js/personal.js"></script>
@@ -745,9 +746,7 @@
   <!-- AOS Animation -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({
-      once: true,
-    });
+
   </script>
 </body>
 
