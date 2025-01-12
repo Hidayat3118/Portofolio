@@ -55,5 +55,19 @@
               }, 2000); 
           });
 
-         
+          // Button Top
+          const backToTopButton = document.getElementById("backToTop");
+
+          window.addEventListener("scroll", function () {
+            if (window.scrollY > 200) {
+              backToTopButton.classList.remove("opacity-0", "pointer-events-none");
+              backToTopButton.classList.add("opacity-100");
+            } else {
+              backToTopButton.classList.add("opacity-0", "pointer-events-none");
+              backToTopButton.classList.remove("opacity-100");
+            }
+          });
+
           
+      
+  
