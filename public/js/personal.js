@@ -1,17 +1,57 @@
 
-            // Js Dark Mode
-            const toggleDarkMode = document.getElementById('toggle');
-            toggleDarkMode.addEventListener('change', () => {
-              document.documentElement.classList.toggle('dark');
-            });
+ // Js Dark Mode
+         
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleDarkMode = document.getElementById('toggle');
+
+  // Check saved mode in localStorage
+  const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+  if (isDarkMode) {
+    document.documentElement.classList.add('dark');
+    toggleDarkMode.checked = true;
+  } else {
+    document.documentElement.classList.remove('dark');
+    toggleDarkMode.checked = false;
+  }
+
+  // Add event listener for toggle
+  toggleDarkMode.addEventListener('change', () => {
+    const isChecked = toggleDarkMode.checked;
+    if (isChecked) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('darkMode', 'true');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('darkMode', 'false');
+    }
+  });
+});
+
 
             // Js Navbar
-            const navLinks = document.querySelector('.nav-links');
-            function onToggleMenu(e) {
-              e.name = e.name === 'menu' ? 'close' : 'menu';
-              navLinks.classList.toggle('top-[10%]');
-              navLinks.classList.toggle('top-[-100%]');
-            }
+            
+const navLinks = document.querySelector('.nav-links');
+const menuIcon = document.querySelector('.menu-icon'); // Pastikan elemen ini adalah ikon toggle
+function onToggleMenu(e) {
+  e.name = e.name === 'menu' ? 'close' : 'menu';
+  navLinks.classList.toggle('top-[10%]');
+  navLinks.classList.toggle('top-[-100%]');
+}
+
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+   
+    navLinks.classList.add('top-[-100%]');
+    navLinks.classList.remove('top-[10%]');
+
+   
+    if (menuIcon) {
+      menuIcon.name = 'menu';
+    }
+  });
+});
             // Toggle FAQ content visibility
             document.querySelectorAll('button').forEach(button => {
               button.addEventListener('click', () => {
