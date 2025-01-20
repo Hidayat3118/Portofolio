@@ -44,6 +44,10 @@
               // Project Dua
               const lineDua = document.getElementById('lineDua');
               lineDua.addEventListener('click', () => lineClamp('lineDua'));
+
+              // Project Tiga
+              const lineTiga = document.getElementById('lineTiga');
+              lineTiga.addEventListener('click', () => lineClamp('lineTiga'));
             });
             // Aos Animation
             window.addEventListener("load", function () {
