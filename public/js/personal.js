@@ -31,27 +31,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Js Navbar
             
+// Ambil elemen-elemen penting
 const navLinks = document.querySelector('.nav-links');
-const menuIcon = document.querySelector('.menu-icon'); // Pastikan elemen ini adalah ikon toggle
-function onToggleMenu(e) {
-  e.name = e.name === 'menu' ? 'close' : 'menu';
+const menuIcon = document.querySelector('ion-icon'); // Ikon toggle
+
+// Fungsi untuk mengubah status menu dan ikon
+function onToggleMenu(icon) {
+  // Ubah ikon antara 'menu' dan 'close'
+  icon.name = icon.name === 'menu' ? 'close' : 'menu';
+
+  // Tampilkan atau sembunyikan menu navigasi
   navLinks.classList.toggle('top-[10%]');
   navLinks.classList.toggle('top-[-100%]');
 }
 
-
+// Tambahkan event listener ke semua tautan di dalam navbar
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-   
+    // Pastikan menu tertutup
     navLinks.classList.add('top-[-100%]');
     navLinks.classList.remove('top-[10%]');
 
-   
+    // Kembalikan ikon menjadi 'menu'
     if (menuIcon) {
       menuIcon.name = 'menu';
     }
   });
 });
+
             // Toggle FAQ content visibility
             document.querySelectorAll('button').forEach(button => {
               button.addEventListener('click', () => {
