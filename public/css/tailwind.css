@@ -672,10 +672,6 @@ video {
   z-index: 50;
 }
 
-.z-\[9999\] {
-  z-index: 9999;
-}
-
 .z-\[9\] {
   z-index: 9;
 }
@@ -1083,11 +1079,6 @@ video {
 .bg-slate-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity, 1));
-}
-
-.bg-teal-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(20 184 166 / var(--tw-bg-opacity, 1));
 }
 
 .bg-transparent {
